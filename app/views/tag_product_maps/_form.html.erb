@@ -1,0 +1,27 @@
+<%= form_with(model: tag_product_map, local: true) do |form| %>
+  <% if tag_product_map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tag_product_map.errors.count, "error") %> prohibited this tag_product_map from being saved:</h2>
+
+      <ul>
+      <% tag_product_map.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tag_id %>
+    <%= form.text_field :tag_id, id: :tag_product_map_tag_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id, id: :tag_product_map_product_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
