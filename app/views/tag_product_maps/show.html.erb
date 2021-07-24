@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @tag_product_map.tag %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @tag_product_map.product %>
+</p>
+
+<%= link_to 'Edit', edit_tag_product_map_path(@tag_product_map) %> |
+<%= link_to 'Back', tag_product_maps_path %>
